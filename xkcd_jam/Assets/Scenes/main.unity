@@ -777,6 +777,11 @@ Prefab:
       propertyPath: m_Name
       value: NPC (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1189974997}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 531465d89ced84178b709baa37dd0326, type: 2}
   m_IsPrefabParent: 0
@@ -858,6 +863,11 @@ Prefab:
       propertyPath: m_Name
       value: NPC (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1189974997}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 531465d89ced84178b709baa37dd0326, type: 2}
   m_IsPrefabParent: 0
@@ -1347,6 +1357,11 @@ Prefab:
       propertyPath: m_Name
       value: NPC (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1189974997}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 531465d89ced84178b709baa37dd0326, type: 2}
   m_IsPrefabParent: 0
@@ -2051,9 +2066,19 @@ Prefab:
       propertyPath: points.Array.data[5]
       value: 
       objectReference: {fileID: 617416609}
+    - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1189974997}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 531465d89ced84178b709baa37dd0326, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1189974997 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4034825868217948, guid: 1938863180e7747089a0de597a3435aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 715133000}
 --- !u!1001 &1257238665
 Prefab:
   m_ObjectHideFlags: 0
@@ -2660,6 +2685,11 @@ Prefab:
       propertyPath: m_Name
       value: NPC (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1189974997}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 531465d89ced84178b709baa37dd0326, type: 2}
   m_IsPrefabParent: 0
@@ -3105,6 +3135,11 @@ Prefab:
       propertyPath: m_Name
       value: NPC (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1189974997}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 531465d89ced84178b709baa37dd0326, type: 2}
   m_IsPrefabParent: 0

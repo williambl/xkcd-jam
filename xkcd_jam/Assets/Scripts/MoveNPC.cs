@@ -9,6 +9,8 @@ public class MoveNPC : MonoBehaviour {
     NavMeshAgent agent;
     Animator anim;
     public Transform[] points;
+    public Transform player;
+    bool isChasingPlayer;
 
     void Start () {
         agent = GetComponent<NavMeshAgent> ();
@@ -17,7 +19,11 @@ public class MoveNPC : MonoBehaviour {
     }
 
     void Update () {
-        if (agent.remainingDistance < 0.1)
+        if (Vector3.Distance(transform.position, player.position) < 10) {
+            agent.destination = player.position;
+            isChasingPlayer = true;
+        }
+        if (!isChasingPlayer && agent.remainingDistance < 0.1)
             Patrol();
 
         Vector3 movementDir = Vector3.zero;

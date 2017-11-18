@@ -634,7 +634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1810d59bae243b1ba51ad2495cafa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  points: []
+  player: {fileID: 4034825868217948, guid: 1938863180e7747089a0de597a3435aa, type: 2}
 --- !u!137 &137347254304267114
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
