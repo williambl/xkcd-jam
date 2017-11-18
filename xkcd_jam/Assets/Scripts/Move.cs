@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent (typeof (UnityEngine.AI.NavMeshAgent))]
+[RequireComponent (typeof (CharacterController))]
 public class Move : MonoBehaviour {
 
-    RaycastHit hitInfo = new RaycastHit();
-    UnityEngine.AI.NavMeshAgent agent;
+    CharacterController controller;
+    public float speed = 6.0f;
 
     void Start () {
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
+        controller = GetComponent<CharacterController> ();
     }
 
     void Update () {
-        if(Input.GetMouseButtonDown(0)) {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray.origin, ray.direction, out hitInfo))
-                agent.destination = hitInfo.point;
-        }
+        if (!controller.isGrounded)
+            return;
+
+        Vector3 movementDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        movementDir = transform.TransformDirection(movementDir);
+        movementDir *= speed;
+        controller.SimpleMove(movementDir);
     }
 }

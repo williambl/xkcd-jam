@@ -234,27 +234,23 @@ GameObject:
   m_PrefabParentObject: {fileID: 1994832095317466, guid: 1938863180e7747089a0de597a3435aa,
     type: 2}
   m_PrefabInternal: {fileID: 715133000}
---- !u!195 &1625251008
-NavMeshAgent:
+--- !u!143 &1625251008
+CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1625251007}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_AgentTypeID: 0
+  serializedVersion: 2
+  m_Height: 1.8
   m_Radius: 0.5
-  m_Speed: 10
-  m_Acceleration: 10
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!114 &1625251009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796ac05c61b7c4b97ba7ff892ede6061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 6
 --- !u!1 &1895131379
 GameObject:
   m_ObjectHideFlags: 0
