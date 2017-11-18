@@ -20,5 +20,7 @@ public class Move : MonoBehaviour {
         movementDir *= speed;
         controller.SimpleMove(movementDir);
         anim.SetBool("isMoving", movementDir != Vector3.zero);
+        anim.SetFloat("velocityX", movementDir.x);
+        anim.SetFloat("velocityZ", movementDir.z);
     }
 }
