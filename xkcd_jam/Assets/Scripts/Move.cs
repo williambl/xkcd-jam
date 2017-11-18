@@ -13,9 +13,6 @@ public class Move : MonoBehaviour {
     }
 
     void Update () {
-        if (!controller.isGrounded)
-            return;
-
         Vector3 movementDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         movementDir = transform.TransformDirection(movementDir);
         movementDir *= speed;
