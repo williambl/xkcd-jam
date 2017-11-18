@@ -6,10 +6,12 @@ using UnityEngine;
 public class Move : MonoBehaviour {
 
     CharacterController controller;
+    Animator anim;
     public float speed = 6.0f;
 
     void Start () {
         controller = GetComponent<CharacterController> ();
+        anim = GetComponent<Animator> ();
     }
 
     void Update () {
@@ -17,5 +19,6 @@ public class Move : MonoBehaviour {
         movementDir = transform.TransformDirection(movementDir);
         movementDir *= speed;
         controller.SimpleMove(movementDir);
+        anim.SetBool("isMoving", movementDir != Vector3.zero);
     }
 }
