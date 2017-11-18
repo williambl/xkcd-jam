@@ -6,12 +6,49 @@ ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
+    100002: chest
+    100004: forearm_L
+    100006: forearm_R
+    100008: head
+    100010: hips
+    100012: metarig
+    100014: neck
+    100016: Person
+    100018: shin_L
+    100020: shin_R
+    100022: shoulder_L
+    100024: shoulder_R
+    100026: spine
+    100028: thigh_L
+    100030: thigh_R
+    100032: upper_arm_L
+    100034: upper_arm_R
     400000: //RootNode
+    400002: chest
+    400004: forearm_L
+    400006: forearm_R
+    400008: head
+    400010: hips
+    400012: metarig
+    400014: neck
+    400016: Person
+    400018: shin_L
+    400020: shin_R
+    400022: shoulder_L
+    400024: shoulder_R
+    400026: spine
+    400028: thigh_L
+    400030: thigh_R
+    400032: upper_arm_L
+    400034: upper_arm_R
     2300000: //RootNode
+    2300002: Person
     3300000: //RootNode
+    3300002: Person
     4300000: Person
     7400000: Default Take
     9500000: //RootNode
+    13700000: Person
   materials:
     importMaterials: 1
     materialName: 0
