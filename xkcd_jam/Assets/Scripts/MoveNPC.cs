@@ -51,10 +51,14 @@ public class MoveNPC : MonoBehaviour {
         while (true) {
             RaycastHit hit;
             Vector3 position = transform.position + new Vector3(0,1,0);
-            if (Physics.Raycast(position, transform.forward, out hit)) {
+            Vector3 direction = player.position - transform.position;
+
+            if (Physics.Raycast(position, direction, out hit)) {
                 Debug.DrawLine(position, hit.point, Color.cyan, 2f);
-                if(hit.collider.gameObject.tag == "Player") {
-                }
+
+                if(hit.collider.gameObject.tag == "Player")
+                    hit.collider.GetComponent<PlayerHealth>().LoseHealth(1f);
+
             }
 
             yield return new WaitForSeconds(1f);
