@@ -1999,11 +1999,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
-        type: 2}
-      propertyPath: points.Array.size
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 4165758179237288, guid: 531465d89ced84178b709baa37dd0326, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5.7
@@ -2043,6 +2038,11 @@ Prefab:
       objectReference: {fileID: 350427}
     - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
         type: 2}
+      propertyPath: points.Array.data[1]
+      value: 
+      objectReference: {fileID: 1041740758}
+    - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
+        type: 2}
       propertyPath: points.Array.data[2]
       value: 
       objectReference: {fileID: 1923828264}
@@ -2051,11 +2051,6 @@ Prefab:
       propertyPath: points.Array.data[3]
       value: 
       objectReference: {fileID: 713341382}
-    - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
-        type: 2}
-      propertyPath: points.Array.data[1]
-      value: 
-      objectReference: {fileID: 1041740758}
     - target: {fileID: 114556893548824054, guid: 531465d89ced84178b709baa37dd0326,
         type: 2}
       propertyPath: points.Array.data[4]
@@ -2090,6 +2085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 549934f3f9826401397c8e2e329a79a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
 --- !u!4 &1189974997 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4034825868217948, guid: 1938863180e7747089a0de597a3435aa,

@@ -12,9 +12,13 @@ public class MoveNPC : MonoBehaviour {
     public Transform player;
     bool isChasingPlayer;
 
+    LineRenderer line;
+
     void Start () {
         agent = GetComponent<NavMeshAgent> ();
         anim = GetComponent<Animator> ();
+        line = GetComponent<LineRenderer> ();
+        line.enabled = false;
         Patrol();
     }
 
@@ -49,6 +53,7 @@ public class MoveNPC : MonoBehaviour {
 
     IEnumerator Shoot () {
         while (true) {
+            line.enabled = false;
             RaycastHit hit;
             Vector3 position = transform.position + new Vector3(0,1,0);
             Vector3 direction = player.position - transform.position;
@@ -56,9 +61,11 @@ public class MoveNPC : MonoBehaviour {
             if (Physics.Raycast(position, direction, out hit)) {
                 Debug.DrawLine(position, hit.point, Color.cyan, 2f);
 
-                if(hit.collider.gameObject.tag == "Player")
+                if(hit.collider.gameObject.tag == "Player") {
                     hit.collider.GetComponent<PlayerHealth>().LoseHealth(1f);
-
+                    line.SetPositions(new []{position, hit.point});
+                    line.enabled = true;
+                }
             }
 
             yield return new WaitForSeconds(1f);
