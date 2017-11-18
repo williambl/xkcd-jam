@@ -1990,7 +1990,6 @@ GameObject:
   - component: {fileID: 1843582386}
   - component: {fileID: 1843582385}
   - component: {fileID: 1843582384}
-  - component: {fileID: 1843582383}
   m_Layer: 0
   m_Name: Minimap Camera
   m_TagString: Untagged
@@ -1998,13 +1997,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1843582383
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1843582382}
-  m_Enabled: 1
 --- !u!92 &1843582384
 Behaviour:
   m_ObjectHideFlags: 0
