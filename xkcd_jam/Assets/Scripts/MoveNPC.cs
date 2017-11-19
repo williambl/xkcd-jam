@@ -23,6 +23,10 @@ public class MoveNPC : MonoBehaviour {
     }
 
     void Update () {
+        if (GameManager.state != GameState.PLAYING) {
+            agent.destination = transform.position;
+            return;
+        }
         if (Vector3.Distance(transform.position, player.position) < 10) {
             if (!isChasingPlayer)
                 StartCoroutine(Shoot ());
