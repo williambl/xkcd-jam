@@ -57,6 +57,8 @@ public class MoveNPC : MonoBehaviour {
 
     IEnumerator Shoot () {
         while (true) {
+            if (GameManager.state != GameState.PLAYING)
+                yield return new WaitForSeconds(1f);
             line.enabled = false;
             RaycastHit hit;
             Vector3 position = transform.position + new Vector3(0,1,0);
