@@ -3022,6 +3022,9 @@ MonoBehaviour:
   win: {fileID: 1555479954}
   lose: {fileID: 1296013364}
   pause: {fileID: 454713158}
+  resume: {fileID: 1191714177}
+  restart: {fileID: 1608361364}
+  quit: {fileID: 1073869895}
 --- !u!4 &1189974997 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4034825868217948, guid: 1938863180e7747089a0de597a3435aa,

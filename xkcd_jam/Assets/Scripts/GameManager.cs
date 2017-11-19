@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -10,8 +12,15 @@ public class GameManager : MonoBehaviour {
         public GameObject lose;
         public GameObject pause;
 
+        public Button resume;
+        public Button restart;
+        public Button quit;
+
         void Start () {
             state = GameState.PLAYING;
+            resume.onClick.AddListener(TogglePause);
+            restart.onClick.AddListener(StartGame);
+            quit.onClick.AddListener(Quit);
         }
 
 	// Update is called once per frame
@@ -21,12 +30,24 @@ public class GameManager : MonoBehaviour {
             pause.SetActive(state == GameState.PAUSED);
 
             if (Input.GetButtonDown("Cancel")) {
+                TogglePause();
+            }
+        }
+
+        public void TogglePause () {
                 if (state == GameState.PLAYING)
                     state = GameState.PAUSED;
                 else if (state == GameState.PAUSED)
                     state = GameState.PLAYING;
-            }
-	}
+        }
+
+        public void StartGame () {
+            SceneManager.LoadScene(1);
+        }
+
+        public void Quit () {
+            SceneManager.LoadScene(0);
+        }
 }
 
 public enum GameState {
