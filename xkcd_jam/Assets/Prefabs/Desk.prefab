@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 4952765686919298}
   - component: {fileID: 33820485927651858}
   - component: {fileID: 23498324846436572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Minimap Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
