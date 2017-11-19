@@ -47,7 +47,7 @@ public class MoveNPC : MonoBehaviour {
         if (!isChasingPlayer && agent.remainingDistance < 0.1)
             Patrol();
 
-        Vector3 movementDir = Vector3.zero;
+        Vector3 movementDir = agent.velocity;
         anim.SetBool("isMoving", movementDir != Vector3.zero);
         anim.SetFloat("velocityX", movementDir.x);
         anim.SetFloat("velocityZ", movementDir.z);
