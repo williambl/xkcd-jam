@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour {
         public Button restart;
         public Button quit;
 
+        public AudioSource src;
+
         void Start () {
             state = GameState.PLAYING;
             resume.onClick.AddListener(TogglePause);
@@ -35,17 +37,20 @@ public class GameManager : MonoBehaviour {
         }
 
         public void TogglePause () {
-                if (state == GameState.PLAYING)
-                    state = GameState.PAUSED;
-                else if (state == GameState.PAUSED)
-                    state = GameState.PLAYING;
+            src.Play();
+            if (state == GameState.PLAYING)
+                state = GameState.PAUSED;
+            else if (state == GameState.PAUSED)
+                state = GameState.PLAYING;
         }
 
         public void StartGame () {
+            src.Play();
             SceneManager.LoadScene(1);
         }
 
         public void Quit () {
+            src.Play();
             SceneManager.LoadScene(0);
         }
 }

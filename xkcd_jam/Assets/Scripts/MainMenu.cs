@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour {
         public Text title;
         public Button play;
         public Button quit;
+        public AudioSource src;
 
 	// Use this for initialization
 	void Start () {
@@ -18,10 +19,12 @@ public class MainMenu : MonoBehaviour {
 	}
 	
 	void Play () {
+            src.Play();
 	    SceneManager.LoadScene(1);
 	}
 
         void Quit () {
+            src.Play();
             Application.Quit();
         }
 

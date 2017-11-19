@@ -13,11 +13,13 @@ public class MoveNPC : MonoBehaviour {
     bool isChasingPlayer;
 
     LineRenderer line;
+    AudioSource src;
 
     void Start () {
         agent = GetComponent<NavMeshAgent> ();
         anim = GetComponent<Animator> ();
         line = GetComponent<LineRenderer> ();
+        src = GetComponent<AudioSource>();
         line.enabled = false;
         Patrol();
     }
@@ -71,6 +73,7 @@ public class MoveNPC : MonoBehaviour {
                     hit.collider.GetComponent<PlayerHealth>().LoseHealth(1f);
                     line.SetPositions(new []{position, hit.point});
                     line.enabled = true;
+                    src.Play();
                 }
             }
 

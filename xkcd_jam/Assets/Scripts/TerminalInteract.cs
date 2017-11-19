@@ -18,6 +18,7 @@ public class TerminalInteract : MonoBehaviour {
 	    if (Input.GetButtonDown("Use")) {
                 if (Physics.CheckSphere(transform.position, 2f, playerMask)) {
                     interacted = true;
+                    GetComponentInChildren<AudioSource>().Play();
                 }
             }
 	}
