@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour {
             if (Input.GetButtonDown("Cancel")) {
                 TogglePause();
             }
+
+            if (state == GameState.WON || state == GameState.LOST)
+                Invoke("StartGame", 2f);
         }
 
         public void TogglePause () {
