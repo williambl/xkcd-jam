@@ -14,7 +14,7 @@ public class TerminalManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	   if (CheckTerminals())
-              Debug.Log("Win!");
+              GameManager.state = GameState.WON;
 	}
 
         bool CheckTerminals () {

@@ -13,5 +13,9 @@ public class PlayerHealth : MonoBehaviour {
 
         void Update () {
             text.text = health.ToString();
+            if (health < 1) {
+                health = 0;
+                GameManager.state = GameState.LOST;
+            }
         }
 }
